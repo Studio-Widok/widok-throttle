@@ -1,11 +1,8 @@
 {
-  "name": "widok-main",
+  "name": "widok-throttle",
   "version": "1.0.0",
   "description": "",
-  "main": "widok-main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "widok-throttle.js",
   "keywords": [],
   "author": "",
   "license": "ISC"
