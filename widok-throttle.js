@@ -13,4 +13,4 @@ function throttle(ms, callback) {
   };
 }
 
-if (typeof module !== 'undefined') module.exports = throttle;
+export default throttle;
