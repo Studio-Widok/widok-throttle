@@ -1,14 +1,14 @@
 function throttle(ms, callback) {
   let lastCall = 0;
   let timeout;
-  return a => {
+  return function () {
     const now = new Date().getTime();
+    clearTimeout(timeout);
     if (now - lastCall >= ms) {
       lastCall = now;
-      callback(a);
+      callback.call(this, ...arguments);
     } else {
-      clearTimeout(timeout);
-      timeout = setTimeout((a => callback.bind(this, a))(a), ms);
+      timeout = setTimeout(callback.call(this, ...arguments), ms);
     }
   };
 }
