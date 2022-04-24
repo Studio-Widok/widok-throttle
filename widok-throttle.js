@@ -8,7 +8,7 @@ function throttle(ms, callback) {
       lastCall = now;
       callback.call(this, ...arguments);
     } else {
-      timeout = setTimeout(callback.call(this, ...arguments), ms);
+      timeout = setTimeout(callback.bind(this, ...arguments), ms);
     }
   };
 }
